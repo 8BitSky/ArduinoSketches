@@ -1,0 +1,90 @@
+//a. Blink Sketch - Three LEDs
+
+void setup()
+{
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  Lights(11);
+  delay(500);
+  Lights(12);
+  delay(500);
+  Lights(13);
+  delay(500);
+}
+
+void Lights(int light) {
+  digitalWrite(light, HIGH);
+  delay(1000); 
+  digitalWrite(light, LOW);
+  delay(1000); 
+}
+
+
+//b. Blink Sketch - RGB LEB
+//This sketch will light up the RGB LED. Simply move your jumper wires from the individual LEDs to the pins of the RGB LED. 
+//Dont forget to connect the RGB Cathode to the GND rail!
+
+void setup()
+{
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  Lights(11);
+  delay(500);
+  Lights(12);
+  delay(500);
+  Lights(13);
+  delay(500);
+}
+
+void Lights(int light) {
+  digitalWrite(light, HIGH);
+  digitalWrite(light2, HIGH);
+  delay(1000); 
+  digitalWrite(light, LOW);
+  digitalWrite(light, LOW);
+  delay(1000); 
+}
+
+
+//c. Blink Sketch - 2 Color Mixing on RGB LED
+//This sketch will allow you to light up two colors on the RGB at once. You can now mix colors!
+
+void setup()
+{
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  Lights(11,12);
+  delay(500);
+  Lights(12,13);
+  delay(500);
+  Lights(13,11);
+  delay(500);
+}
+
+void Lights(int light1, int light2) {
+  digitalWrite(light1, HIGH);
+  digitalWrite(light2, HIGH);
+  delay(1000); 
+  digitalWrite(light1, LOW);
+  digitalWrite(light2, LOW);
+  delay(1000); 
+}
+
+//d. Blink Sketch -
+// You can pick colors at the following website. https://g.co/kgs/c5XQBF
+// Modify the above sketch to mix three colors. 
