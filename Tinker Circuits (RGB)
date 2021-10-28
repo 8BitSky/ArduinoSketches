@@ -1,0 +1,45 @@
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+ //lightLED(HIGH,LOW,LOW);
+ //lightLED(LOW,HIGH,LOW);
+ //lightLED(LOW,LOW,HIGH);
+  
+ //lightLED(HIGH,LOW,HIGH); //Yellow
+ //lightLED(LOW,HIGH,HIGH); //Cyan
+ //lightLED(HIGH,HIGH,LOW); //Purple
+ //lightLED(HIGH,HIGH,HIGH); //White
+  
+ lightLEDA(245,113,42); 
+ //Uses color picker at https://g.co/kgs/1kRTKX
+}
+
+//Uses values of HIGH/LOW along with digitalWrite to turn on individual pins
+void lightLED(bool Red, bool Blue, bool Green){
+  digitalWrite(13, Red);
+  digitalWrite(12, Blue);
+  digitalWrite(11, Green);
+  delay(1000);
+  digitalWrite(13, LOW);
+  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
+  delay(1000);
+}
+
+//Uses INT values along with analogWrite() to set intensity of each pin
+void lightLEDA(int Red, int Blue, int Green){
+  analogWrite(13, Red);
+  analogWrite(12, Blue);
+  analogWrite(11, Green);
+  delay(1000);
+  analogWrite(13, 0);
+  analogWrite(12, 0);
+  analogWrite(11, 0);
+  delay(1000);
+}
